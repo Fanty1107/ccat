@@ -10,13 +10,13 @@ MyLog::MyLog()
         const std::time_t time = std::chrono::system_clock::to_time_t(now);
         file << "[USAGE]: " << std::put_time(std::localtime(&time), "%Y-%m-%d") << '\n';
     } else {
-        std::cerr << "[ERROR]: Não foi possível abrir log.txt\n";
+        std::cerr << "[ERROR]: Cannot open /tmp/ccat.log\n";
     }
 }
 
 void MyLog::add_log(std::string text_logged, bool status_code) {
     if (!file.is_open()) {
-        std::cerr << "[ERROR]: O arquivo de log não está aberto\n";
+        std::cerr << "[ERROR]: /tmp/ccat.log is closed btw\n";
         return;
     }
 
