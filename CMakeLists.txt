@@ -5,6 +5,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
-add_executable(ccat src/main.cpp src/log.cpp)
+add_executable(ccat src/main.cpp src/log.cpp src/file_utils.cpp)
 target_include_directories(ccat PRIVATE include)
 target_compile_features(ccat PRIVATE cxx_std_20)
