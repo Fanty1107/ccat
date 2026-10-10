@@ -9,7 +9,7 @@ int main(int argc, char* argv[]){
         std::cout << "Enter a file to read see -h for help\n";
         return 1;
     }
-    std::string arg = argv[1];
+    const std::string arg = argv[1];
     if (arg == "-h") {
         log_file.add_log("See help", STATUS_LOG::OK);
         print_help();
